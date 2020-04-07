@@ -15,7 +15,7 @@ var randomarray=[];
 
 
 function getRandomItem () {
-  var item = cardarray[Math.floor(Math.random()*10)];
+  var item = cardarray[Math.floor(Math.random()*cardarray.length)];
   if(randomarray != []) { //check if empty array already
     if (randomarray.includes(item)) {
       console.log("item repeated", item);
