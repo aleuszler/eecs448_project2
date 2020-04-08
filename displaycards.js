@@ -3,17 +3,6 @@ window.addEventListener("load", setupCards(8));
 var cardarray=[];
 var randomarray=[];
 
-//for(var i=0; i<randomarray.length ;i++)
-//{
-//  var img=randomarray[i].image;
-//  var imagecontainer=document.getElementById('image'+i);
-//  imagecontainer.innerHTML='<img src="'+img+'">';
-//  var copyimg=valuelist[i].image;
-//  var imagecontainer=document.getElementById('copy'+i);
-//  imagecontainer.innerHTML='<img src="'+copyimg+'">';
-//}
-
-
 function getRandomItem () {
   var item = cardarray[Math.floor(Math.random()*cardarray.length)];
   if(randomarray != []) { //check if empty array already
@@ -46,7 +35,7 @@ function createCardArray(currLength) {
   for (let i = 0; i < currLength; i++)
   {
     randomarray[index]=getRandomItem();
-    randomarray[index+1]=getRandomItem();
+    randomarray[index+1]=randomarray[index];
     index=index+2;
   }
   console.log(randomarray);

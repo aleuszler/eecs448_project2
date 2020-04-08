@@ -1,5 +1,4 @@
 function revealCard(cardID) {
-console.log("clicked ", cardID);
   var image = document.getElementById(cardID);
   for (let i = 0; i < cardarray.length; i++) {
     if (cardarray[i].name = cardID) {
