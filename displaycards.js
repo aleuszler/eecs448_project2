@@ -1,41 +1,41 @@
 window.addEventListener("load", setupCards(8));
 
-var randomarray=[];
+var randomarray = [];
 
-function getRandomItem () {
-  var item = cardarray[Math.floor(Math.random()*cardarray.length)];
-  if(randomarray != []) { //check if empty array already
+function getRandomItem() {
+  var item = cardarray[Math.floor(Math.random() * cardarray.length)];
+  if (randomarray != []) {
+    //check if empty array already
     if (randomarray.includes(item)) {
       console.log("item repeated", item);
-      item=getRandomItem();
+      item = getRandomItem();
     }
   }
-    return item;
+  return item;
 }
 
-function shufflecards(array)
-{
-    let currentIndex = array.length,temporaryValue,randomindex;
+function shufflecards(array) {
+  let currentIndex = array.length,
+    temporaryValue,
+    randomindex;
 
-    while(currentIndex !== 0)
-    {
-        randomindex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+  while (currentIndex !== 0) {
+    randomindex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
 
-        temporaryValue=array[currentIndex];
-        array[currentIndex]=array[randomindex];
-        array[randomindex]=temporaryValue;
-    }
-    return array;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomindex];
+    array[randomindex] = temporaryValue;
+  }
+  return array;
 }
 
 function createCardArray(currLength) {
   let index = 0;
-  for (let i = 0; i < currLength; i++)
-  {
-    randomarray[index]=getRandomItem();
-    randomarray[index+1]=randomarray[index];
-    index=index+2;
+  for (let i = 0; i < currLength; i++) {
+    randomarray[index] = getRandomItem();
+    randomarray[index + 1] = randomarray[index];
+    index = index + 2;
   }
   console.log(randomarray);
   randomarray = shufflecards(randomarray);
@@ -43,21 +43,27 @@ function createCardArray(currLength) {
 }
 
 function setupCards(total) {
-  randomarray=[];
-  createCardArray(total/2);
-  let perrow = total/2;
+  randomarray = [];
+  createCardArray(total / 2);
+  let perrow = total / 2;
+
   if (perrow > 6) {
-    perrow = total/3;
+    perrow = total / 3;
   }
   html = "<table align='center'><tr>";
   for (let i = 0; i < total; i++) {
     let imgID = i + randomarray[i].name;
-    html += "<td bgcolor='black'><div><img id='"+imgID+"' src='https://i.imgur.com/iSazVxA.png' onClick='revealCard(this.id)'></div>" + "</td>";
-    var next = i+1;
-    if (next%perrow==0 && next!=total) {
+
+    html +=
+      "<td bgcolor='black'><div><img id='" +
+      imgID +
+      "' src='https://i.imgur.com/iSazVxA.png' onClick='revealCard(this.id)'></div>" +
+      "</td>";
+    var next = i + 1;
+    if (next % perrow == 0 && next != total) {
       html += "</tr><tr>";
     }
   }
   html += "</tr></table>";
-  document.getElementById("container").innerHTML=html;
+  document.getElementById("container").innerHTML = html;
 }
