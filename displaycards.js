@@ -43,8 +43,18 @@ function createCardArray(currLength) {
   console.log(randomarray);
 }
 
-function setupCards(total) {
-randomarray=[];
+function revealCard(cardID) {
+  var image = document.getElementById(cardID);
+  console.log(cardID);
+  console.log(cardarray);
+  for (let i = 0; i < cardarray.length; i++) {
+    if (cardarray[i].name = cardID) {
+      image.src = cardarray[i].image;
+    }
+  }
+}
+
+function defineArray() {
 cardarray = [
 {name: 'spade A', image: 'https://i.imgur.com/MeM9CHv.png'},
 {name: 'spade 2', image: 'https://i.imgur.com/0uGlxc9.png'},
@@ -57,7 +67,11 @@ cardarray = [
 {name: 'spade 9', image: 'https://i.imgur.com/JFjcU47.png'},
 {name: 'spade 10', image: 'https://i.imgur.com/NjDAVPG.png'}
 ];
+}
 
+function setupCards(total) {
+  defineArray();
+  randomarray=[];
   createCardArray(total/2);
   let perrow = total/2;
   if (perrow > 6) {
