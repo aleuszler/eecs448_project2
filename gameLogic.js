@@ -1,5 +1,7 @@
 let card1IDHolder;
 let card2IDHolder;
+let matchCard=[];
+matchCard.length=8;
 function revealCard(cardID) {
   console.log(randomarray);
   var image = document.getElementById(cardID);
@@ -28,11 +30,20 @@ function revealCard(cardID) {
     console.log(card2IDHolder);
     if(card1IDHolder!=undefined && card2IDHolder!=undefined && card1IDHolder.src==card2IDHolder.src)//if cards match execute
     {
-      card1IDHolder.removeEventListener('click', revealCard);//removes onclick from matched cards
-      card2IDHolder.removeEventListener('click', revealCard);//removes onclick from matched cards
-      card1IDHolder=undefined;//resets cardholder ID for next pair
-      card2IDHolder=undefined;//resets cardholder ID for next pair
-      console.log("did this happen?");
+      for(let i=0; i<8;i++)
+      {
+        if(matchCard[i]==undefined)//this function is not removing EventListener as it should *FIX*
+        {
+          matchCard[i]=card1IDHolder;
+          matchCard[i+1]=card2IDHolder;
+          matchCard[i].removeEventListener('click', revealCard);//removes onclick from matched cards
+          matchCard[i+1].removeEventListener('click', revealCard);//removes onclick from matched cards
+          card1IDHolder=undefined;//resets cardholder ID for next pair
+          card2IDHolder=undefined;//resets cardholder ID for next pair
+          console.log(matchCard[i]);
+          i=8;
+        }
+      }
     }
     else{//after .75 seconds if the cards didn't match reflips them
       setTimeout(() =>{
