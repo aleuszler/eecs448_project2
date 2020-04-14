@@ -9,9 +9,10 @@ function revealCard(cardID) {
   // console.log("cardarray",cardarray);
 
   var res=cardID.slice(1,15);
-  if(flipped.length > 2)
+  if(flipped.length > 1)
   {
     flipped=[];
+    flipped.push(res);
   }
   else {
     flipped.push(res);
@@ -34,21 +35,21 @@ function revealCard(cardID) {
          count=count+1;
          document.getElementById("count").innerHTML=count;
          // document.getElementById(cardID).style.display="none";
+
        }
        else {
         document.getElementById("Match").innerHTML="Match Not Found";
+        // setTimeout(function(){ image.src = "https://i.imgur.com/iSazVxA.png"},2000);
        }
      }
    }
+   setTimeout(function(){ image.src = "https://i.imgur.com/iSazVxA.png"},2000);
  }
-     else {
-      image.src = "https://i.imgur.com/iSazVxA.png";
-      flipped=[];
+       else {
+        image.src = "https://i.imgur.com/iSazVxA.png";
+        flipped=[];
+       }
  }
-
-}
-
-
 
 
 
