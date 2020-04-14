@@ -1,5 +1,6 @@
 var flipped=new Array();
 var count=0;
+var matched=new Array();
 
 function revealCard(cardID) {
   console.log(randomarray);
@@ -22,7 +23,7 @@ function revealCard(cardID) {
 
   if (
    image.src == "https://i.imgur.com/iSazVxA.png" &&
-   !displayTwo(randomarray)
+  !displayTwo(randomarray)
  ) {
    for (let i = 0; i < cardarray.length; i++) {
      if (cardID.includes(cardarray[i].name)) {
@@ -32,17 +33,19 @@ function revealCard(cardID) {
          document.getElementById("Match").innerHTML="Match Made";
          count=count+1;
          document.getElementById("count").innerHTML=count;
-         displayTwo();
-
+         // document.getElementById(cardID).style.display="none";
        }
        else {
         document.getElementById("Match").innerHTML="Match Not Found";
        }
      }
    }
- } else {
-   image.src = "https://i.imgur.com/iSazVxA.png";
  }
+     else {
+      image.src = "https://i.imgur.com/iSazVxA.png";
+      flipped=[];
+ }
+
 }
 
 
