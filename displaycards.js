@@ -52,7 +52,7 @@ function setupCards(total) {
   }
   html = "<table align='center'><tr>";
   for (let i = 0; i < total; i++) {
-    let imgID = i + randomarray[i].name;
+    let imgID =i+randomarray[i].name;
 
     html +=
       "<td bgcolor='black'><div><img id='" +
