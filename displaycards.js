@@ -1,4 +1,6 @@
-window.addEventListener("load", setupCards(8));
+var cardAmt = 8;
+
+window.addEventListener("load", setupCards(cardAmt));
 
 var randomarray = [];
 
@@ -48,7 +50,8 @@ function setupCards(total) {
   let perrow = total / 2;
 
   if (perrow > 6) {
-    perrow = total / 3;
+    perrow = 6;
+console.log(perrow);
   }
   html = "<table align='center'><tr>";
   for (let i = 0; i < total; i++) {
@@ -66,4 +69,26 @@ function setupCards(total) {
   }
   html += "</tr></table>";
   document.getElementById("container").innerHTML = html;
+}
+
+function prevLevel()
+{
+  if (cardAmt == 8) {
+    alert("No previous levels.");
+  }
+  else {
+    cardAmt = cardAmt - 2;
+    setupCards(cardAmt);
+  }
+}
+
+function nextLevel()
+{
+  if (cardAmt > 17) {
+    alert("Max level reached!");
+  }
+  else {
+    cardAmt = cardAmt + 2;
+    setupCards(cardAmt);
+  }
 }
