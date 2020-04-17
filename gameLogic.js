@@ -7,7 +7,6 @@ function revealCard(cardID) {
   var image = document.getElementById(cardID);
   console.log("cardID",cardID);
   // console.log("cardarray",cardarray);
-
   var res=cardID.slice(1,15);
   if(flipped.length > 1)
   {
@@ -34,8 +33,6 @@ function revealCard(cardID) {
          document.getElementById("Match").innerHTML="Match Made";
          count=count+1;
          document.getElementById("count").innerHTML=count;
-         // document.getElementById(cardID).style.display="none";
-
        }
        else {
         document.getElementById("Match").innerHTML="Match Not Found";
@@ -43,12 +40,12 @@ function revealCard(cardID) {
        }
      }
    }
-   setTimeout(function(){ image.src = "https://i.imgur.com/iSazVxA.png"},2000);
+      setTimeout(function(){ if(document.getElementById("Match").innerHTML=="Match Not Found"){image.src = "https://i.imgur.com/iSazVxA.png"; flipped=[];}}},2000);
  }
-       else {
-        image.src = "https://i.imgur.com/iSazVxA.png";
-        flipped=[];
-       }
+       // else {
+       //  image.src = "https://i.imgur.com/iSazVxA.png";
+       //  flipped=[];
+       // }
  }
 
 
