@@ -1,6 +1,29 @@
-var flipped=new Array();
+var flipped= [];
+var flippedID= [];
 var count=0;
-var matched=new Array();
+var matched= [];
+var randomarray = [];
+
+function resetFlip() {
+  if (flipped.length == 2) {
+  for (let c = 0; c < flippedID.length; c++) {
+    var cimage = document.getElementById(flippedID[c]);
+    if (matched.length > 0) {
+console.log ("yeee");
+      for (let m = 0; m < count; c++) {
+        if (cimage.src != matched[m]) {
+console.log ("match found");
+	  cimage.src = "https://i.imgur.com/iSazVxA.png";
+	}
+      }
+    }
+    else {
+      cimage.src = "https://i.imgur.com/iSazVxA.png";
+      console.log ("yeet");
+    }
+  }
+  }
+}
 
 function revealCard(cardID) {
   console.log(randomarray);
@@ -8,46 +31,63 @@ function revealCard(cardID) {
   console.log("cardID",cardID);
   // console.log("cardarray",cardarray);
 
-  var res=cardID.slice(1,15);
+  // var res=cardID.slice(1,15);
   if(flipped.length > 1)
   {
     flipped=[];
-    flipped.push(res);
+    flipped.push(image.src);
+    flippedID=[];
+    flippedID.push(cardID);
   }
   else {
-    flipped.push(res);
+    flipped.push(image.src);
+    flippedID.push(cardID);
   }
-  console.log(res);
   console.log("flipped array",flipped)
-
 
 
   if (
    image.src == "https://i.imgur.com/iSazVxA.png" &&
   !displayTwo(randomarray)
  ) {
-   for (let i = 0; i < cardarray.length; i++) {
-     if (cardID.includes(cardarray[i].name)) {
-       image.src = cardarray[i].image;
-       if(flipped[0]==flipped[1])
-       {
+    for (let i = 0; i < cardarray.length; i++) {
+      if (cardID.includes(cardarray[i].name)) {
+        image.src = cardarray[i].image;
+        if(flipped[0]==flipped[1])
+        {
          document.getElementById("Match").innerHTML="Match Made";
          count=count+1;
          document.getElementById("count").innerHTML=count;
          // document.getElementById(cardID).style.display="none";
-
-       }
-       else {
-        document.getElementById("Match").innerHTML="Match Not Found";
+	 matched.push(flipped[0]);
+        }
+        else {
+          document.getElementById("Match").innerHTML="Match Not Found";
         // setTimeout(function(){ image.src = "https://i.imgur.com/iSazVxA.png"},2000);
-       }
-     }
-   }
-   setTimeout(function(){ image.src = "https://i.imgur.com/iSazVxA.png"},2000);
- }
-       else {
-        image.src = "https://i.imgur.com/iSazVxA.png";
-        flipped=[];
+        }
+      }
+    }
+    setTimeout(function(){ if (flipped.length == 2) {
+  for (let c = 0; c < flippedID.length; c++) {
+    var cimage = document.getElementById(flippedID[c]);
+    if (matched.length > 0) {
+console.log ("yeee");
+      for (let m = 0; m < count; c++) {
+        if (cimage.src != matched[m]) {
+	  cimage.src = "https://i.imgur.com/iSazVxA.png";
+	}
+      }
+    }
+    else {
+      cimage.src = "https://i.imgur.com/iSazVxA.png";
+      console.log ("yeet");
+    }
+  }
+  }},3000);
+  }
+  else {
+   image.src = "https://i.imgur.com/iSazVxA.png";
+   flipped=[];
        }
  }
 
