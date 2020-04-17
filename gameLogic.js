@@ -70,7 +70,6 @@ if(flipped.length > 1)
   for (let c = 0; c < flippedID.length; c++) {
     var cimage = document.getElementById(flippedID[c]);
     if (matched.length > 0) {
-console.log ("yeee");
       for (let m = 0; m < count; c++) {
         if (cimage.src != matched[m]) {
 	  cimage.src = "https://i.imgur.com/iSazVxA.png";
@@ -79,15 +78,21 @@ console.log ("yeee");
     }
     else {
       cimage.src = "https://i.imgur.com/iSazVxA.png";
-      console.log ("yeet");
+      console.log ("reached");
     }
   }
   }},2000);
   }
   else {
-   image.src = "https://i.imgur.com/iSazVxA.png";
-   flipped=[];
-       }
+    if (matched.length > 0) {
+      for (let m = 0; m < count; c++) {
+        if (image.src != matched[m]) { //if image is not one of the matched pairs
+	  image.src = "https://i.imgur.com/iSazVxA.png";
+   	  flipped=[];
+	}
+      }
+    }
+   }
  }
 
 
