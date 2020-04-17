@@ -62,11 +62,6 @@ function revealCard(cardID) {
     {
       card2IDHolder=undefined;
     }
-    image.src = "https://i.imgur.com/iSazVxA.png";
-    console.log("card1else");
-    console.log(card1IDHolder);
-    console.log("card2else");
-    console.log(card2IDHolder);
   }
 }
 //NOT NEEDED FOR THE MOMENT
