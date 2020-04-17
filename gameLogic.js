@@ -32,7 +32,16 @@ function revealCard(cardID) {
   // console.log("cardarray",cardarray);
 
   // var res=cardID.slice(1,15);
-  if(flipped.length > 1)
+
+
+  if (
+   image.src == "https://i.imgur.com/iSazVxA.png" &&
+  !displayTwo()
+ ) {
+    for (let i = 0; i < cardarray.length; i++) {
+      if (cardID.includes(cardarray[i].name)) {
+        image.src = cardarray[i].image;
+if(flipped.length > 1)
   {
     flipped=[];
     flipped.push(image.src);
@@ -43,16 +52,6 @@ function revealCard(cardID) {
     flipped.push(image.src);
     flippedID.push(cardID);
   }
-  console.log("flipped array",flipped)
-
-
-  if (
-   image.src == "https://i.imgur.com/iSazVxA.png" &&
-  !displayTwo(randomarray)
- ) {
-    for (let i = 0; i < cardarray.length; i++) {
-      if (cardID.includes(cardarray[i].name)) {
-        image.src = cardarray[i].image;
         if(flipped[0]==flipped[1])
         {
          document.getElementById("Match").innerHTML="Match Made";
@@ -83,7 +82,7 @@ console.log ("yeee");
       console.log ("yeet");
     }
   }
-  }},3000);
+  }},2000);
   }
   else {
    image.src = "https://i.imgur.com/iSazVxA.png";
@@ -103,7 +102,7 @@ function displayTwo() {
     }
   }
   console.log(notflippedCount);
-  if (imgs.length - notflippedCount > 2) {
+  if ((imgs.length - notflippedCount - (2*count)) > 2) {
     return true;
   } else {
     return false;
