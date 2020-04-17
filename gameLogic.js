@@ -40,7 +40,7 @@ function revealCard(cardID) {
        }
      }
    }
-      setTimeout(function(){ if(document.getElementById("Match").innerHTML=="Match Not Found"){image.src = "https://i.imgur.com/iSazVxA.png"; flipped=[];}}},2000);
+      setTimeout(function(){ if(document.getElementById("Match").innerHTML=="Match Not Found"){image.src = "https://i.imgur.com/iSazVxA.png"; flipped=[];}},2000);
  }
        // else {
        //  image.src = "https://i.imgur.com/iSazVxA.png";
