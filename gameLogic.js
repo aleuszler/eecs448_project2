@@ -1,7 +1,5 @@
 let card1IDHolder;
 let card2IDHolder;
-let matchCard=[];
-matchCard.length=8;
 function revealCard(cardID) {
   console.log(randomarray);
   var image = document.getElementById(cardID);
@@ -30,20 +28,8 @@ function revealCard(cardID) {
     console.log(card2IDHolder);
     if(card1IDHolder!=undefined && card2IDHolder!=undefined && card1IDHolder.src==card2IDHolder.src)//if cards match execute
     {
-      for(let i=0; i<8;i++)
-      {
-        if(matchCard[i]==undefined)//this function is not removing EventListener as it should *FIX*
-        {
-          matchCard[i]=card1IDHolder;
-          matchCard[i+1]=card2IDHolder;
-          matchCard[i].removeEventListener('click', revealCard);//removes onclick from matched cards
-          matchCard[i+1].removeEventListener('click', revealCard);//removes onclick from matched cards
-          card1IDHolder=undefined;//resets cardholder ID for next pair
-          card2IDHolder=undefined;//resets cardholder ID for next pair
-          console.log(matchCard[i]);
-          i=8;
-        }
-      }
+      card1IDHolder=undefined;
+      card2IDHolder=undefined;
     }
     else{//after 2 seconds if the cards didn't match reflips them
       setTimeout(() =>{
@@ -51,7 +37,7 @@ function revealCard(cardID) {
       card2IDHolder.src="https://i.imgur.com/iSazVxA.png";
       card1IDHolder=undefined;
       card2IDHolder=undefined;
-    }, 2000);
+    }, 500);
     }
   } else {
     if(card1IDHolder==image)//below if functions make IDholder for said image undefined if unselected lines 31 to 38
@@ -62,6 +48,11 @@ function revealCard(cardID) {
     {
       card2IDHolder=undefined;
     }
+    // image.src = "https://i.imgur.com/iSazVxA.png";
+    // console.log("card1else");
+    // console.log(card1IDHolder);
+    // console.log("card2else");
+    // console.log(card2IDHolder);
   }
 }
 //NOT NEEDED FOR THE MOMENT
