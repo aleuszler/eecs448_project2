@@ -2,7 +2,7 @@ var cardAmt = 8;
 
 window.addEventListener("load", setupCards(cardAmt));
 
-var randomarray = [];
+// var randomarray = [];
 
 function getRandomItem() {//Pulls an card from arrayofcards.js
   var item = cardarray[Math.floor(Math.random() * cardarray.length)];
