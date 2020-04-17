@@ -45,13 +45,13 @@ function revealCard(cardID) {
         }
       }
     }
-    else{//after .75 seconds if the cards didn't match reflips them
+    else{//after 2 seconds if the cards didn't match reflips them
       setTimeout(() =>{
       card1IDHolder.src="https://i.imgur.com/iSazVxA.png";
       card2IDHolder.src="https://i.imgur.com/iSazVxA.png";
       card1IDHolder=undefined;
       card2IDHolder=undefined;
-    }, 750);
+    }, 2000);
     }
   } else {
     if(card1IDHolder==image)//below if functions make IDholder for said image undefined if unselected lines 31 to 38
