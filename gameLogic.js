@@ -71,6 +71,10 @@ if(flipped.length > 1)
 	}
       }
     }
+    else {
+      image.src = "https://i.imgur.com/iSazVxA.png";
+      flipped=[];
+    }
    }
  }
 
