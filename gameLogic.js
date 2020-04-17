@@ -4,27 +4,6 @@ var count=0;
 var matched= [];
 var randomarray = [];
 
-function resetFlip() {
-  if (flipped.length == 2) {
-  for (let c = 0; c < flippedID.length; c++) {
-    var cimage = document.getElementById(flippedID[c]);
-    if (matched.length > 0) {
-console.log ("yeee");
-      for (let m = 0; m < count; c++) {
-        if (cimage.src != matched[m]) {
-console.log ("match found");
-	  cimage.src = "https://i.imgur.com/iSazVxA.png";
-	}
-      }
-    }
-    else {
-      cimage.src = "https://i.imgur.com/iSazVxA.png";
-      console.log ("yeet");
-    }
-  }
-  }
-}
-
 function revealCard(cardID) {
   console.log(randomarray);
   var image = document.getElementById(cardID);
