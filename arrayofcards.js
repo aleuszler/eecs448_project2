@@ -1,3 +1,5 @@
+//This is the array that stores all the cards that will be used with the game 
+//The array is structured with the name of the card, and the image link so it can be displayed to the user 
 var cardarray = [
 {name: 'spade A', image: 'https://i.imgur.com/MeM9CHv.png'},
 {name: 'spade 2', image: 'https://i.imgur.com/0uGlxc9.png'},
