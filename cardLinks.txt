@@ -1,3 +1,5 @@
+This is a file containing the image links to all the cards used in the game 
+
 Spade	A	https://i.imgur.com/MeM9CHv.png
 Spade	2	https://i.imgur.com/0uGlxc9.png
 Spade	3	https://i.imgur.com/8WKqNzB.png
