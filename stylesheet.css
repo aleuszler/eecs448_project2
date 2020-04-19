@@ -1,15 +1,18 @@
 /* <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> */
 
+/* CSS styling for the title */
 div.Title {
   text-align: center;
   font-family: cursive;
   font-size: 50px;
 }
 
+/* CSS styling for h3 */
 h3 {
   text-align: center;
 }
 
+/* CSS styling for the main game */
 .Game {
 background-color: red;
 padding: 35px 35px;
@@ -19,11 +22,13 @@ align: middle;
 font-size: 15px;
 }
 
+/* CSS styling for the hover event in the main game */
 .Game:hover {
   color:blue;
   background:white;
 }
 
+/* CSS styling for the user */
 .User{
   background-color: blue;
   padding: 35px 35px;
@@ -32,11 +37,13 @@ font-size: 15px;
   font-size: 15px;
 }
 
+/* CSS styling for the user hover event */
 .User:hover {
   color:blue;
   background:white;
 }
 
+/* CSS styling for the button layout event */
 .buttonlayout {
   text-align:center;
 }
@@ -45,12 +52,14 @@ font-size: 15px;
   height: 50px;
 }
 
+/* CSS styling for the table/board */
 table, tr, td {
     border: 1px solid black;
     padding: 5px;
     border-spacing: 20px;
 }
 
+/* hidding the imgcard information */
 .imgcard {
     visibility: hidden;
 }
