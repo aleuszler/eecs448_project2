@@ -1,14 +1,20 @@
-var cardAmt = 8;
+//This file displays the cards on the HTML table for the user to interact with 
 
-window.addEventListener("load", setupCards(cardAmt));
+var cardAmt = 8; //cardAmt is the amount of cards that will be displayed on the board, the starting card amount is 8 cards 
 
-// var randomarray = [];
+window.addEventListener("load", setupCards(cardAmt)); //loads the specified card amounts when function is called 
 
-function getRandomItem() {//Pulls an card from arrayofcards.js
+//Pulls an card from arrayofcards.js
+function getRandomItem() 
+{
   var item = cardarray[Math.floor(Math.random() * cardarray.length)];
-  if (randomarray != []) {
-    //check if empty array already
-    if (randomarray.includes(item)) {//if card has already been picked it reruns function
+ 
+  //check if empty array already
+  if (randomarray != []) 
+  {
+    //if card has already been picked it reruns function
+    if (randomarray.includes(item)) 
+    {
       console.log("item repeated", item);
       item = getRandomItem();
     }
@@ -16,42 +22,54 @@ function getRandomItem() {//Pulls an card from arrayofcards.js
   return item;
 }
 
-function shufflecards(array) {//sets array to be different for every level
+//sets array to be different/shuffled for every level
+function shufflecards(array) 
+{
   let currentIndex = array.length,
     temporaryValue,
     randomindex;
-
-  while (currentIndex !== 0) {//sorts array into the new shuffled order
-    randomindex = Math.floor(Math.random() * currentIndex);
+    
+  //sorts array into the new shuffled order
+  while (currentIndex !== 0) 
+  {
+    randomindex = Math.floor(Math.random() * currentIndex); //determining a random value 
     currentIndex -= 1;
 
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomindex];
-    array[randomindex] = temporaryValue;
+    temporaryValue = array[currentIndex]; //setting temporaryValye to the array value at the currentIndex
+    array[currentIndex] = array[randomindex]; //setting the array value at current index to the array value at a random index 
+    array[randomindex] = temporaryValue; //setting the randomvalue index card to the temporaryValue 
   }
   return array;
 }
 
-function createCardArray(currLength) {//creates initial array of cards for game
+//creates initial array of cards for game
+function createCardArray(currLength) 
+{
   let index = 0;
-  for (let i = 0; i < currLength; i++) {
-    randomarray[index] = getRandomItem();//pulls a random card see line5
+  for (let i = 0; i < currLength; i++)
+  {
+    randomarray[index] = getRandomItem();//pulls a random card
     randomarray[index + 1] = randomarray[index];//duplicates the card pulled so there is a pair
     index = index + 2;//skips to the location for the next pair
   }
   console.log(randomarray);
-  randomarray = shufflecards(randomarray);//shuffles the array of paired cards see line 17
+  randomarray = shufflecards(randomarray);//shuffles the array of paired cards 
   console.log(randomarray);
 }
 
-function setupCards(total) {//sets up the Game.html screen
-  randomarray = [];
-  createCardArray(total / 2);
+//sets up the Game.html screen/game board 
+function setupCards(total) 
+{
+  randomarray = []; 
+  createCardArray(total / 2); //calling createCardArray to initialize the array of cards for the game 
   let perrow = total / 2;
 
-  if (perrow > 6) {
-    perrow = 6;
+  if (perrow > 6) 
+  {
+    perrow = 6; 
   }
+  
+  //creating the table to display the cards on the Game.html board 
   html = "<table align='center'><tr>";
   for (let i = 0; i < total; i++) {
     let imgID = i + randomarray[i].name;
@@ -70,24 +88,31 @@ function setupCards(total) {//sets up the Game.html screen
   document.getElementById("container").innerHTML = html;
 }
 
+//function goes back to the previous level and shows the correct number of cards on the board, the amount of cards differs by 2 cards per level
 function prevLevel()
 {
-  if (cardAmt == 8) {
+  //Checking to see if the user is at level 1 (the game starts with 8 cards on the board) 
+  if (cardAmt == 8) 
+  {
     alert("No previous levels.");
   }
-  else {
-    cardAmt = cardAmt - 2;
-    setupCards(cardAmt);
+  else 
+  {
+    cardAmt = cardAmt - 2; //decrease the card amount by 2 cards so the amount of cards stays even 
+    setupCards(cardAmt); //setting up the cards with the new updated card amount on the board 
   }
 }
 
+//function goes to the next level and shows the correct number of cards on the board, the amount of cards differs by 2 cards per level 
 function nextLevel()
 {
-  if (cardAmt > 17) {
+  if (cardAmt > 17) //Checking if the user has reached the max level and alerting the user that there is no other level
+  {
     alert("Max level reached!");
   }
-  else {
-    cardAmt = cardAmt + 2;
-    setupCards(cardAmt);
+  else 
+  {
+    cardAmt = cardAmt + 2; //increasing the card amount by 2 cards so the amount of cards stays even 
+    setupCards(cardAmt); //setting up the cards with the new updated card amount on the board
   }
 }
