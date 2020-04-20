@@ -54,3 +54,10 @@ table, tr, td {
 .imgcard {
     visibility: hidden;
 }
+
+#text {
+  text-align:center;
+}
+#count {
+  text-align:center;
+}

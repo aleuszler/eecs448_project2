@@ -2,6 +2,7 @@ let card1IDHolder;
 let card2IDHolder;
 let matchCard = [];
 var randomarray = [];
+var count=0;
 let isTimeout=false
 matchCard.length = randomarray.length;
 function revealCard(cardID) {
@@ -25,6 +26,8 @@ function revealCard(cardID) {
       //second cardholderID for match
       card2IDHolder = image;
     }
+    count=count+1;
+    document.getElementById("count").innerHTML=count;
     console.log("card1");
     console.log(card1IDHolder.src);
     console.log("card2");

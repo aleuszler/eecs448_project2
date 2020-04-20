@@ -72,6 +72,8 @@ function setupCards(total) {//sets up the Game.html screen
 
 function prevLevel()
 {
+  count=0;
+  document.getElementById("count").innerHTML=count;
   if (cardAmt == 8) {
     alert("No previous levels.");
   }
@@ -83,6 +85,8 @@ function prevLevel()
 
 function nextLevel()
 {
+  count=0;
+  document.getElementById("count").innerHTML=count;
   if (cardAmt > 17) {
     alert("Max level reached!");
   }
