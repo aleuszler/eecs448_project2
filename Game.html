@@ -1,24 +1,25 @@
-<!-- This file is the html file that links the game files and logic so the user can play the game. This is the file that the user interacts with the most -->
 <DOCTYPE! html>
   <html lang="en">
     <head>
       <title>Welcome!</title>
-      <script src="./arrayofcards.js"></script> <!-- calls the javascript that stores the cards used in the game  -->
-      <script src="./gameLogic.js"></script> <!-- calls the javascript that has the game logic that runs the game -->
-      <link rel="stylesheet" href="./stylesheet.css" /> <!-- calls the css that creates and establishes the view of the game interface -->
+      <script src="./arrayofcards.js"></script>
+      <script src="./gameLogic.js"></script>
+      <link rel="stylesheet" href="./stylesheet.css" />
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-      <div class="table" id="container"></div> <!-- creates the table that will display the cards -->
-      <script src="./displaycards.js"></script> <!-- calls the javascript that displays the cards in the table -->
+      <div class="table" id="container"></div>
+      <script src="./displaycards.js"></script>
 
       <br />
+      <div id="text"><p>Total Number of Moves</p></div>
+      <div id="count"></div>
+      <br>
       <div class="buttonlayout">
-        <!--these are buttons that help the user/player play/interact with the game -->
-        <button class="User" onClick='prevLevel()'>Previous Level</button> <!-- this button takes the user back to the previous level -->
-        <button class="Game"><a href="Game.html">Restart Game</a></button> <!-- this button allows the user to restart the game -->
-        <button class="User" onClick='nextLevel()'>Next Level</button> <!-- this button takes the user to the next level of the game -->
+        <button class="User" onClick='prevLevel()'>Previous Level</button>
+        <button class="Game"><a href="Game.html">Restart Game</a></button>
+        <button class="User" onClick='nextLevel()'>Next Level</button>
       </div>
     </body>
   </html>
