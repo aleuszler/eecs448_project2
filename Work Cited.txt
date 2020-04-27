@@ -1,0 +1,21 @@
+Work Cited for code: 
+Game.html: 
+    No Sources Cited 
+
+arrayofcards.js:
+    imgur was used to get the cards used for the memory game 
+
+cardsLinks.txt: 
+    imgur was used to get the cards used for the memory game 
+
+displaycards.js:
+    No Sources Cited
+
+gameLogic.js: 
+    No Sources Cited 
+
+index.html:
+    No Sources Cited
+
+stylesheet.css:
+    https://www.w3schools.com/w3css/4/w3.css
