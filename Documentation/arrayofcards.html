@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>arrayofcards.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>arrayofcards.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>This is the array that stores all the cards that will be used with the game 
+The array is structured with the name of the card, and the image link so it can be displayed to the user </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">var</span> cardarray = [
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade A'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/MeM9CHv.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade 2'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/0uGlxc9.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade 3'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/8WKqNzB.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade 4'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/MxJQMOy.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade 5'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/fzTqJ3V.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade 6'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/zzTpG1B.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade 7'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/w7ceS1R.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade 8'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/VzOg1cK.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade 9'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/JFjcU47.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade 10'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/NjDAVPG.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade J'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/x3SSmPs.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade Q'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/zd59yVX.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'spade K'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/bvaypAL.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club A'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/6wY5nFy.png'</span> },
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club 2'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/FKaPs1H.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club 3'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/De4etad.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club 4'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/t0fjmPp.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club 5'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/16LsUXF.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club 6'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/5XtF1ZU.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club 7'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/1RreVRZ.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club 8'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/Xwb8cIF.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club 9'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/klgFNDy.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club 10'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/LZXGRy1.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club J'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/TxaWrBE.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club Q'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/pryE7WM.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'club K'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/TpAfLLy.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond A'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/aAlIJHL.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond 2'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/WCK4g0X.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond 3'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/ky6tz66.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond 4'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/Mjq6mOt.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond 5'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/hI35Stn.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond 6'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/7OXCC6T.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond 7'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/HWPKG9s.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond 8'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/r8zw3mN.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond 9'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/bcAeC5R.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond 10'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/5fT4R0K.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond J'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/5UodK7U.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond Q'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/ClsUgna.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'diamond K'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/J88Ooo1.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart A'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/05bqVp5.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart 2'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/u6mSruW.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart 3'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/5JGRJBS.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart 4'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/PuMvaNA.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart 5'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/TJT7ALv.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart 6'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/U0YPMMK.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart 7'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/aENnZ41.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart 8'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/zsMEsOW.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart 9'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/N8AbfrP.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart 10'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/sMfbzb8.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart J'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/ItLkBzI.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart Q'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/Ag9birI.png'</span>},
+{<span class="hljs-attr">name</span>: <span class="hljs-string">'heart K'</span>, <span class="hljs-attr">image</span>: <span class="hljs-string">'https://i.imgur.com/SqGRsyk.png'</span>}
+];</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

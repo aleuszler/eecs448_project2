@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>displaycards.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>displaycards.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>This file displays the cards on the HTML table for the user to interact with </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-keyword">var</span> cardAmt = <span class="hljs-number">8</span>; <span class="hljs-comment">//cardAmt is the amount of cards that will be displayed on the board, the starting card amount is 8 cards </span>
+
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"load"</span>, setupCards(cardAmt)); <span class="hljs-comment">//loads the specified card amounts when function is called </span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>Pulls an card from arrayofcards.js</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRandomItem</span>(<span class="hljs-params"></span>)
+</span>{
+  <span class="hljs-keyword">var</span> item = cardarray[<span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * cardarray.length)]; <span class="hljs-comment">//getting a random card from the array of cards</span>
+  <span class="hljs-keyword">if</span> (randomarray != []) <span class="hljs-comment">//enters when the array is not empty</span>
+  {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>check if array has the current random card</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span> (randomarray.includes(item)) 
+    {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>if card has already been picked it reruns function</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"item repeated"</span>, item);
+      item = getRandomItem(); <span class="hljs-comment">//setting the item as the function to get a card that is not a repeated card</span>
+    }
+  }
+  <span class="hljs-keyword">return</span> item; <span class="hljs-comment">//return the item card</span>
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>sets array to be different/shuffled for every level </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">shufflecards</span>(<span class="hljs-params">array</span>) 
+</span>{
+  <span class="hljs-keyword">let</span> currentIndex = array.length, <span class="hljs-comment">//setting current index to array length </span>
+    temporaryValue, <span class="hljs-comment">//creating a temporary value </span>
+    randomindex; <span class="hljs-comment">//creating a random index value</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>sorts array into the new shuffled order  </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">while</span> (currentIndex !== <span class="hljs-number">0</span>) 
+  {
+    randomindex = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * currentIndex); <span class="hljs-comment">//determining a random value and storing it in random index</span>
+    currentIndex -= <span class="hljs-number">1</span>; <span class="hljs-comment">//subtracting current index by 1 so there is no infinite loop</span>
+
+    temporaryValue = array[currentIndex]; <span class="hljs-comment">//setting temporaryValue to the array value at the currentIndex</span>
+    array[currentIndex] = array[randomindex]; <span class="hljs-comment">//setting the array value at current index to the array value at a random index</span>
+    array[randomindex] = temporaryValue; <span class="hljs-comment">//setting the randomvalue index card to the temporaryValue</span>
+  }
+  <span class="hljs-keyword">return</span> array; <span class="hljs-comment">//returning the shuffled array</span>
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>creates initial array of cards for game</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createCardArray</span>(<span class="hljs-params">currLength</span>) 
+</span>{
+  <span class="hljs-keyword">let</span> index = <span class="hljs-number">0</span>; <span class="hljs-comment">//setting index to 0 </span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; currLength; i++) 
+  {
+    randomarray[index] = getRandomItem(); <span class="hljs-comment">//pulls a random card see line 8</span>
+    randomarray[index + <span class="hljs-number">1</span>] = randomarray[index]; <span class="hljs-comment">//duplicates the card pulled so there is a pair</span>
+    index = index + <span class="hljs-number">2</span>; <span class="hljs-comment">//skips to the location of the next pair of cards so you are not duplicating the same card</span>
+  }
+  <span class="hljs-built_in">console</span>.log(randomarray);
+  randomarray = shufflecards(randomarray); <span class="hljs-comment">//shuffles the array of paired cards see line 25</span>
+  <span class="hljs-built_in">console</span>.log(randomarray);
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>sets up the Game.html screen </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setupCards</span>(<span class="hljs-params">total</span>)
+</span>{
+  randomarray = []; <span class="hljs-comment">//creating random array </span>
+  createCardArray(total / <span class="hljs-number">2</span>); <span class="hljs-comment">//calling createCardArray to initialize the array of cards for the game</span>
+  <span class="hljs-keyword">let</span> perrow = total / <span class="hljs-number">2</span>; <span class="hljs-comment">//setting the perrow value for the board </span>
+
+  <span class="hljs-keyword">if</span> (perrow &gt; <span class="hljs-number">6</span>) <span class="hljs-comment">//if perrow value is greater than 6 </span>
+  {
+    perrow = <span class="hljs-number">6</span>; <span class="hljs-comment">//set perrow to 6</span>
+  }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>creating the table to display the cards on the Game.html board </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  html = <span class="hljs-string">"&lt;table align='center'&gt;&lt;tr&gt;"</span>; <span class="hljs-comment">//aligning the table to the center of the page</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; total; i++) {
+    <span class="hljs-keyword">let</span> imgID = i + randomarray[i].name; <span class="hljs-comment">//defining imgID </span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>creating the board/table</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    html +=
+      <span class="hljs-string">"&lt;td bgcolor='black'&gt;&lt;div&gt;&lt;img id='"</span> +
+      imgID +
+      <span class="hljs-string">"' src='https://i.imgur.com/iSazVxA.png' onClick='revealCard(this.id)'&gt;&lt;/div&gt;"</span> + <span class="hljs-comment">//on click reveals the card</span>
+      <span class="hljs-string">"&lt;/td&gt;"</span>;
+    <span class="hljs-keyword">var</span> next = i + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">if</span> (next % perrow == <span class="hljs-number">0</span> &amp;&amp; next != total) {
+      html += <span class="hljs-string">"&lt;/tr&gt;&lt;tr&gt;"</span>;
+    }
+  }
+  html += <span class="hljs-string">"&lt;/tr&gt;&lt;/table&gt;"</span>;
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"container"</span>).innerHTML = html;
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>function goes back to the previous level and shows the correct number of cards on the board, the amount of cards differs by 2 cards per level</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">prevLevel</span>(<span class="hljs-params"></span>)
+</span>{
+  count=<span class="hljs-number">0</span>; <span class="hljs-comment">//setting the counter to 0 </span>
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"count"</span>).innerHTML=count; <span class="hljs-comment">//displaying the counter</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Checking to see if the user is at level 1 (the game starts with 8 cards on the board) </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">if</span> (cardAmt == <span class="hljs-number">8</span>) 
+  {
+    alert(<span class="hljs-string">"No previous levels."</span>);
+  }
+  <span class="hljs-keyword">else</span> 
+  {
+    cardAmt = cardAmt - <span class="hljs-number">2</span>; <span class="hljs-comment">//decreased the card amount by 2 cards so the amount of cards stays even</span>
+    setupCards(cardAmt); <span class="hljs-comment">//setting up the cards with the new updated card amount on the board</span>
+  }
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>function goes to the next level and shows the correct number of cards on the board, the amount of cards differs by 2 cards per level </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">nextLevel</span>(<span class="hljs-params"></span>)
+</span>{
+  count=<span class="hljs-number">0</span>; <span class="hljs-comment">//setting the counter to 0</span>
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"count"</span>).innerHTML=count; <span class="hljs-comment">//displaying the counter</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Checking if the user has reached the max level and alerting the user that there is no other level</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">if</span> (cardAmt &gt; <span class="hljs-number">17</span>) 
+  {
+    alert(<span class="hljs-string">"Max level reached!"</span>);
+  }
+  <span class="hljs-keyword">else</span> 
+  {
+    cardAmt = cardAmt + <span class="hljs-number">2</span>; <span class="hljs-comment">//increasing the card amount by 2 cards so the amount of cards stays even </span>
+    setupCards(cardAmt); <span class="hljs-comment">//setting up the cards with the new updated card amount on the board</span>
+  }
+}</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
