@@ -3,7 +3,8 @@ Game.html:
     No Sources Cited 
 
 arrayofcards.js:
-    imgur was used to get the cards used for the memory game 
+    imgur was used to get the cards used for the memory game
+    Katharine made/drew the images
 
 cardsLinks.txt: 
     imgur was used to get the cards used for the memory game 
