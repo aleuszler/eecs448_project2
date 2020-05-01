@@ -1,0 +1,62 @@
+Product Backlog
+
+Features:
+Array of cards in the form of an album of images (through imgur)
+    - Cards compiled into the array through javascript
+    - ~ 1 - 2 hour estimated complexity
+    - ~ Roughly a day completion time (made from scratch)
+
+Random selection of cards from array to use in matching game
+    - Duplicates and randomizes array of (2 of each) cards
+    - ~ 2 hours estimated complexity time
+    - ~ 3 - 4 hours completion time
+
+When a card is clicked, it flips over showing the face of the card
+    - Originally we allowed it to flip back over, but removed the feature
+    - ~ 1 - 2 hours estimated complexity time
+    - ~ 1 hour completion time
+    - Removed allowing it to flip back over roughly a week later
+
+Check if two cards are a match
+    - ~ 1 - 2 hours estimated complexity time
+    - ~ Several days completion time
+    - Code for this changed several times between different people to try making it work
+      for the next feature listed
+
+Track flipped over cards, matched cards, and remaining cards
+    - Keep paired cards unclickable and uncovered
+    - ~ 2 - 4 hours estimated complexity time
+    - Several days completion time
+    - We really struggled with this one
+
+Only flip over two cards at a time
+    - Prevent a third card from being flipped
+    - ~ 1 hour estimated complexity time
+    - ~ 1 hour completion time
+    - Found bugs, fixed roughly a week later
+
+Accompanying documentation
+    - ~ 2 - 4 hours completion time
+    - Done over the course of the project
+
+Stretch Goal Features:
+Varying levels of difficulty
+    - Caps out at 18 cards and minimum of 8 cards due to space constraints
+    - ~ 2 hours estimated complexity time
+    - ~ 2 hours completion time
+
+Moves counter
+    - Tracks how many moves it takes the player to complete a game
+    - ~ 1 - 2 hours estimated complexity time
+    - ~ 2 hours completion time
+
+Timer/Clock
+    - Have a time limit to complete a game
+    - ~ 2 - 4 hours estimated complexity time
+    - not completed this sprint
+
+High Score Leaderboard
+    - Local storage of lowest amount of moves needed per game
+    - ~ 1 - 2 hours estimated complexity time
+    - not completed this sprint
+    - Would have recycled code from our previous project to accomplish
