@@ -9,7 +9,6 @@ We plan to complete:
     - Only flip over two cards at a time
     - Documentation
     - Varying levels of difficulty
-    - Timer/Clock
 
 
 We completed:
