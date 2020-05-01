@@ -20,4 +20,3 @@ We completed:
     - Documentation
     - Varying levels of difficulty
     - Moves Counter
-    - Timer/Clock
