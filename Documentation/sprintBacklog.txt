@@ -1,0 +1,23 @@
+Sprint Backlog
+
+Descriptions found in Product Backlog
+We plan to complete:
+    - Create an array of cards through js
+    - Random selection of cards from array to use in matching game
+    - When a card is clicked, it flips over showing the face of the card
+    - Check if two cards are a match
+    - Only flip over two cards at a time
+    - Documentation
+    - Varying levels of difficulty
+
+
+We completed:
+    - Create an array of cards through js
+    - Random selection of cards from array to use in matching game
+    - When a card is clicked, it flips over showing the face of the card
+    - Check if two cards are a match
+    - Only flip over two cards at a time
+    - Documentation
+    - Varying levels of difficulty
+    - Moves Counter
+    - Timer/Clock
