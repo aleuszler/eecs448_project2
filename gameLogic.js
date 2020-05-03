@@ -7,6 +7,20 @@ var randomarray = []; //creating a random array
 var count=0; //creating count variable to keep track of the amount of moves
 let isTimeout=false //isTimeout is a variable that is used to track the flipped and matched cards 
 matchCard.length = randomarray.length; //setting matchCard array length to be the same as the randomarray length
+var matchedcount = 0;
+
+function Score (total, moves)
+{
+  this.scoreTotal= total;
+  this.scoreMoves = moves;
+}
+
+if(JSON.parse(window.localStorage.getItem('arrayofscores'))!=null) {
+  var  scoresArray =JSON.parse(window.localStorage.getItem('arrayofscores'))
+}
+else {
+  var scoresArray = [];
+}
 
 //This function starts and controls the game
 function revealCard(cardID) 
@@ -63,6 +77,15 @@ function revealCard(cardID)
       {
         card1IDHolder = undefined; //sets card1IDHolder to undefined so the game can continue 
         card2IDHolder = undefined; //sets card2IDHolder to undefined so the game can continue 
+        matchedcount = matchedcount+2;
+        console.log (matchedcount);
+        console.log (cardAmt);
+        if (matchedcount == cardAmt) {
+            let newScore = new Score(cardAmt, count)
+	        scoresArray.push(newScore);
+          	window.localStorage.setItem('arrayofscores',JSON.stringify(scoresArray));
+	        console.log(JSON.parse(window.localStorage.getItem('arrayofscores')));
+		}
       }
     }
   } 
