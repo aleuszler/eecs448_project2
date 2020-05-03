@@ -1,0 +1,64 @@
+console.log("=================");
+console.log("Running Tests");
+console.log("=================");
+
+//Make sure all of the ids have images
+// for (let i = 0; i < total; i++) {
+// document.getElementById(i + randomarray[i].name).click();
+// }
+
+checkcount();
+checklevels();
+//make sure all values in array are unique
+//https://www.techiedelight.com/check-array-contains-duplicates-javascript/
+function checkuq () {
+  return new Set(randomarray).size !== randomarray.length;
+}
+
+if(!checkuq(randomarray))
+{
+  console.log("Test for Duplicates in Array - Passed: No Duplicates Found")
+}
+else if(checkuq(randomarray))
+{
+  console.log("Test for Duplicates in Array - Failed: Duplicates Found");
+}
+
+function checkcount () {
+  if(document.getElementById("count")<1 ||document.getElementById("count").innerHTML==0)
+  {
+    console.log("Test for Counter - Passed : The counter is clear");
+    console.log(document.getElementById("count").innerHTML);
+  }
+  else{
+    console.log("Test for Counter - Failed : Counter is not clear");
+    console.log(document.getElementById("count").innerHTML);
+  }
+}
+
+
+//check number of cards with new level
+
+function checklevels () {
+  document.getElementById("next").click();
+  if(cardAmt>cardAmt+2)
+  {
+    console.log("Check Failed -- Too many cards");
+  }
+  else {
+    console.log("nextlevel() function passed");
+  }
+  document.getElementById("prev").click();
+  if(cardAmt<8)
+  {
+    console.log("There are not enough cards");
+  }
+  else {
+    console.log("prevlevel() function passed");
+  }
+
+}
+
+console.log("=============");
+console.log("End of Testing");
+console.log("==============");
