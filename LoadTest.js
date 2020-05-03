@@ -28,7 +28,6 @@ function checkcount () {
   if(document.getElementById("count")<1 ||document.getElementById("count").innerHTML==0)
   {
     console.log("Test for Counter - Passed : The counter is clear");
-    console.log(document.getElementById("count").innerHTML);
   }
   else{
     console.log("Test for Counter - Failed : Counter is not clear");
