@@ -7,7 +7,6 @@ var randomarray = []; //creating a random array
 var count=0; //creating count variable to keep track of the amount of moves
 let isTimeout=false //isTimeout is a variable that is used to track the flipped and matched cards 
 matchCard.length = randomarray.length; //setting matchCard array length to be the same as the randomarray length
-var matchedcount = 0;
 
 function Score (total, moves)
 {

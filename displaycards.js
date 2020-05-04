@@ -1,6 +1,7 @@
 //This file displays the cards on the HTML table for the user to interact with 
 
 var cardAmt = 8; //cardAmt is the amount of cards that will be displayed on the board, the starting card amount is 8 cards 
+var matchedcount = 0;
 
 window.addEventListener("load", setupCards(cardAmt)); //loads the specified card amounts when function is called 
 
@@ -60,6 +61,7 @@ function createCardArray(currLength)
 function setupCards(total)
 {
   randomarray = []; //creating random array 
+  matchedcount = 0;
   createCardArray(total / 2); //calling createCardArray to initialize the array of cards for the game
   let perrow = total / 2; //setting the perrow value for the board 
 
