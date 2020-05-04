@@ -1,9 +1,5 @@
 window.addEventListener("load", sortScores());
 
-function sortArray() { //sort array from least to greatest, also set maximum length/size of 5
-  
-}
-
 function sortScores() { //pulls from local storage and sorts based on how many cards the game had
   var scoreArray = JSON.parse(window.localStorage.getItem('arrayofscores'));
   var array8 = [];
@@ -33,19 +29,33 @@ function sortScores() { //pulls from local storage and sorts based on how many c
 	  array18.push(scoreArray[i].scoreMoves);
 	}
   }
-  
+let max5 = 0;
 if (array8 != null) {
-  for (let i = 0; i < array8.length; i++) {
-    if (i > 0) {
+array8.sort();
+  if (array8.length < 6) {
+    max5 = array8.length;
+  }
+  else {
+    max5 = 5;
+  }
+    for (let i = 0; i < max5; i++) {
+      if (i > 0) {
 	    document.querySelector("#cards8").innerText += ", " + array8[i];
 	}
 	else {
 	    document.querySelector("#cards8").innerText = array8[i];
 	}
-  }
+    }
 }
 if (array10 != null) {
-  for (let i = 0; i < array10.length; i++) {
+array10.sort();
+if (array10.length < 6) {
+    max5 = array10.length;
+  }
+  else {
+    max5 = 5;
+  }
+  for (let i = 0; i < max5; i++) {
     if (i > 0) {
 	    document.querySelector("#cards10").innerText += ", " + array10[i];
 	}
@@ -55,7 +65,14 @@ if (array10 != null) {
   }
 }
 if (array12 != null) {
-  for (let i = 0; i < array12.length; i++) {
+array12.sort();
+if (array12.length < 6) {
+    max5 = array12.length;
+  }
+  else {
+    max5 = 5;
+  }
+  for (let i = 0; i < max5; i++) {
     if (i > 0) {
 	    document.querySelector("#cards12").innerText += ", " + array12[i];
 	}
@@ -65,7 +82,14 @@ if (array12 != null) {
   }
 }
 if (array14 != null) {
-  for (let i = 0; i < array14.length; i++) {
+array14.sort();
+if (array14.length < 6) {
+    max5 = array14.length;
+  }
+  else {
+    max5 = 5;
+  }
+  for (let i = 0; i < max5; i++) {
     if (i > 0) {
 	    document.querySelector("#cards14").innerText += ", " + array14[i];
 	}
@@ -75,7 +99,14 @@ if (array14 != null) {
   }
 }
 if (array16 != null) {
-  for (let i = 0; i < array16.length; i++) {
+array16.sort();
+if (array16.length < 6) {
+    max5 = array16.length;
+  }
+  else {
+    max5 = 5;
+  }
+  for (let i = 0; i < max5; i++) {
     if (i > 0) {
 	    document.querySelector("#cards16").innerText += ", " + array16[i];
 	}
@@ -85,7 +116,14 @@ if (array16 != null) {
   }
 }
 if (array18 != null) {
-  for (let i = 0; i < array18.length; i++) {
+array18.sort();
+if (array18.length < 6) {
+    max5 = array18.length;
+  }
+  else {
+    max5 = 5;
+  }
+  for (let i = 0; i < max5; i++) {
     if (i > 0) {
 	    document.querySelector("#cards18").innerText += ", " + array18[i];
 	}
