@@ -5,6 +5,7 @@
       <title>Welcome!</title>
       <script src="./arrayofcards.js"></script> <!-- calls the javascript that stores the cards used in the game  -->
       <script src="./gameLogic.js"></script> <!-- calls the javascript that has the game logic that runs the game -->
+
       <link rel="stylesheet" href="./stylesheet.css" /> <!-- calls the css that creates and establishes the view of the game interface -->
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,10 +20,11 @@
       <br>
       <div class="buttonlayout">
         <!--these are buttons that help the user/player play/interact with the game -->
-        <button class="User" onClick='prevLevel()'>Previous Level</button> <!-- this button takes the user back to the previous level -->
-        <button class="Game"><a href="Game.html">Restart Game</a></button> <!-- this button allows the user to restart the game -->
-        <button class="User" onClick='nextLevel()'>Next Level</button> <!-- this button takes the user to the next level of the game -->
-      </div>
+        <button id="prev" class="User" onClick='prevLevel()'>Previous Level</button> <!-- this button takes the user back to the previous level -->
+        <button id="restart" class="Game"><a href="Game.html">Restart Game</a></button> <!-- this button allows the user to restart the game -->
+        <button id="next" class="User" onClick='nextLevel()'>Next Level</button> <!-- this button takes the user to the next level of the game -->
+  <script src="./LoadTest.js"></script>
+    </div>
     </body>
   </html>
 </DOCTYPE!>
