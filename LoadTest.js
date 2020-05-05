@@ -2,13 +2,11 @@ console.log("=================");
 console.log("Running Tests");
 console.log("=================");
 
-//Make sure all of the ids have images
-// for (let i = 0; i < total; i++) {
-// document.getElementById(i + randomarray[i].name).click();
-// }
 
-checkcount();
+
+checkmovescount();
 checklevels();
+checkmatches();
 //make sure all values in array are unique
 //https://www.techiedelight.com/check-array-contains-duplicates-javascript/
 function checkuq () {
@@ -24,14 +22,25 @@ else if(checkuq(randomarray))
   console.log("Test for Duplicates in Array - Failed: Duplicates Found");
 }
 
-function checkcount () {
+
+function checkmovescount () {
   if(document.getElementById("count")<1 ||document.getElementById("count").innerHTML==0)
   {
-    console.log("Test for Counter - Passed : The counter is clear");
+    console.log("Test for Counter - Passed : The counter for moves is clear");
   }
   else{
-    console.log("Test for Counter - Failed : Counter is not clear");
+    console.log("Test for Counter - Failed : The counter for moves is not clear");
     console.log(document.getElementById("count").innerHTML);
+  }
+}
+
+function checkmatches () {
+  if(matchedcount==0)
+  {
+    console.log("Test for Matches - Passed : All of the matches are cleared")
+  }
+  else {
+    console.log("Test for Matches - Failed : All of the matches are not cleared");
   }
 }
 
