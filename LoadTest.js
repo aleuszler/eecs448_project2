@@ -3,7 +3,6 @@ console.log("Running Tests");
 console.log("=================");
 
 
-
 checkmovescount();
 checklevels();
 checkmatches();

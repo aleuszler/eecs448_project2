@@ -8,7 +8,7 @@ function sortScores() { //pulls from local storage and sorts based on how many c
   var array14 = [];
   var array16 = [];
   var array18 = [];
-  console.log(scoreArray);
+  // console.log(scoreArray);
   for (let i = 0; i < scoreArray.length; i++) {
 	if (scoreArray[i].scoreTotal === 8) {
 	  array8.push(scoreArray[i].scoreMoves);
