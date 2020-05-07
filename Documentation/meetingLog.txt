@@ -34,3 +34,9 @@ Monday, April 20, 2020
 Monday, April 27, 2020
     2:44  PM - Finished discussing project through Groupme, finished documentation
 	       Added TA and Prof. Gill as collaborators
+	  
+Saturday, May 2, 2020
+    1:00 PM - Delegated project 3 tasks
+    	      Discussed deadlines for new tasks/documentation tasks
+	      Goals: Add Leaderboard feature before Monday
+		
