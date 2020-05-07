@@ -60,3 +60,4 @@ High Score Leaderboard
     - ~ 1 - 2 hours estimated complexity time
     - not completed this sprint
     - Would have recycled code from our previous project to accomplish
+    -Completed during Project 3
